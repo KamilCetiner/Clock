@@ -1,17 +1,20 @@
-function BrlnClock() {
-    var BrlnClock = new Date();
 
-    var hours = BrlnClock.getHours();
-    var minutes = BrlnClock.getMinutes();
-    var seconds = BrlnClock.getSeconds();
+
+
+function BrlnClock() {
+    let Clockbrln = new Date();
+
+    let hours = Clockbrln.getHours();
+    let minutes = Clockbrln.getMinutes();
+    let seconds = Clockbrln.getSeconds();
 
     // Making a AM and PM system
 
-    var amPm = (hours < 12) ? "AM" : "PM";
-
+    let amPm = (hours < 12) ? "AM" : "PM";
+   
     // Making 12-hour format
 
-    hours = (hours > 12) ? hours - 12 : hours:
+    hours = (hours > 12) ? hours - 12 : hours;
 
     
     hours = ("0" + hours).slice(-2);
@@ -21,7 +24,13 @@ function BrlnClock() {
     // Printig the clock
 
     document.getElementById("clock").innerHTML =
-    hours + " : " + minutes " : " + seconds + amPm;
+    hours + " : " + minutes + " : " + seconds + " " + amPm;
+
+    let t = setTimeout(BrlnClock, 500);
 
 
 }
+
+
+
+
